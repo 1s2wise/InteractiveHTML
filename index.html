@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+             <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+            <script>
+                $(document).ready(function(){
+                    $("#firstchoice").click(function(){
+                    $("#databox").show();
+                    $("#secondchoice").hide();
+                    });    
+
+                    $("#secondchoice").click(function(){
+                    $("#databox").show();
+                    $("#firstchoice").hide();
+                    });
+
+                    $("#close").click(function(){
+                    $("#secondchoice").show();
+                    $("#firstchoice").show();
+                    $("#databox").hide();
+                    });
+
+
+                    $("#modalclose").click(function(){
+                    $("#secondchoice").show();
+                    $("#firstchoice").show();
+                    $("#databox").hide();
+                    });
+
+
+                    
+                });
+
+                document.getElementById("addIntegration").onclick = function () {
+                 location.href = "file:///home/experion/Documents/WorkRepos/webconnex/webhook.html";
+                };
+            </script>
+
+        
+        <title>
+            My First Site
+        </title>
+    </head>
+    <body>
+            <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> 
+                        </button>
+                        <a href="#">
+                            <img src="img/fire.png" style="width:42px;height:42px;"/>
+                        </a>
+                    </div>
+                    
+                            
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Campaign
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                          </ul>
+                        </li>
+                        <li class="active"><a href="#">Reports</a></li>
+                        
+                        <li><a href="#">Communication</a></li>
+                        <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Extras
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#">Page 1-1</a></li>
+                                  <li><a href="#">Page 1-2</a></li>
+                                  <li><a href="#">Page 1-3</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">ForeverBrave<span class="glyphicon glyphicon-cog"></span></a></li>
+                        </ul>  
+                    </div>                     
+                      
+                    </div>
+
+            </nav>
+
+            <a class="rotate" href="#">Get Help</a>
+            <img id="chat" src="img/chat.png"/ height="50px;" width="50px;"/>
+
+            <div class="container">
+                    <legend>
+                            <div class="maincontent">
+                                <h2>Integrations</h2>
+                                <h5>Configuration of external Integrations</h5>
+                                <h5>Configuration of external Integrations.Configuration of external Integrations</h5>
+                            </div>
+                    </legend>
+        
+                    <legend class="center">
+                        <button class="btn btn-success" name="addIntergration" data-toggle="modal" data-target="#ModalIntegrate"><span class="glyphicon glyphicon-plus"></span>ADD INTEGRATION</button>                        
+                        <div id="ModalIntegrate" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                              
+                                  <!-- Modal content-->
+                                  <div class="modal-content">
+                                    <div>
+                                      <button type="button" id="close" class="close" data-dismiss="modal">&times;</button>
+                                      <h4>Choose Integration</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <img class="imgbox" id="firstchoice" src="img/m1.png">
+                                      
+                                      <img class="imgbox" id="secondchoice" src="img/m2.png">
+
+                                      <div id="databox">
+                                            <div id=labelbox>
+                                                    <h5>WebHookname</h5>                                
+                                                    <h5>WebHook Endpoint URL</h5>                            
+                                            </div>
+                
+                                            <div id="inputbox">
+                                                     <input type="text" placeholder="Name"/> 
+                                                     <input type="text" placeholder="Name"/> 
+                                            </div>
+
+                                            
+                                    </div>
+
+                                    <div id="modalresponse">
+                                            <a class="btn btn-default" href="webhook.html" id="addIntegration">Add Integration</a>
+                                            <a href="#" id="modalclose">Close</a>
+                                    </div>
+                                    </div>
+                                    
+                                    
+
+                                    
+                                  </div>
+                              
+                                </div>
+                              </div>
+                    </legend>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>Active Public API Keys</h4>
+                            <div class="databox">
+                                <h5>Name</h5>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <h5>API Key</h5>
+                            <p>qqqqqqqqqqqqqqqqqqqqq<a href="#"><span class="oneline glyphicon glyphicon-pencil"></span></a>
+                                                    <a href="#"><span class="oneline glyphicon glyphicon-trash"></span></p></a>
+                            <p>ppppppppppppppppppppp<a href="#"><span class="oneline glyphicon glyphicon-pencil"></span></a>
+                                                    <a href="#"><span class="oneline glyphicon glyphicon-trash"></span></p></a>
+
+                            
+                               
+
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-success" id="addAPI">ADD API KEY</button>
+
+                        </div>
+                    </div>
+                    <legend></legend>
+
+                    <legend>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                    <h5 class="sethelp">HELP:</h5>
+                                    <a class="decorate" href="#">API Documentation</a>
+                                    <p class="sethelp">To request help</p>
+                                    <a class="decorate" href="#">fill out this form</a>
+                            </div>
+                            
+                        </div>
+                    </legend>
+
+            </div>
+        <div id="footer">
+            
+
+        </div>
+    </body>
+</html>
